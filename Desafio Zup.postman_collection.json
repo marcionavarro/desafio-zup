@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "51500d69-030f-4710-b2e5-38685584233f",
+		"name": "Desafio Zup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Enderecos - Adicionar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"streetAddress\": \"Rua Caetite\",\r\n        \"number\": 712,\r\n        \"complement\": \"casa\",\r\n        \"neighborhood\": \"Cidade Nova\",\r\n        \"city\": \"Manaus\",\r\n        \"state\": \"AM\",\r\n        \"zipCode\": \"69096550\",\r\n        \"user\": {\r\n            \"id\": 1,\r\n            \"name\": \"Maria Brown\",\r\n            \"cpf\": \"95875825\",\r\n            \"email\": \"maria2@gmail.com\",\r\n            \"birthDate\": \"123456\"\r\n        }    \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios - Adicionar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marcio\",\r\n    \"cpf\": \"000.050.000-00\",\r\n    \"email\": \"teste5@teste.com\",\r\n    \"birthDate\": \"10/05/1981\",\r\n    \"address\": [\r\n        {\r\n            \"streetAddress\": \"Serra Negra\",\r\n            \"number\": 897,\r\n            \"complement\": \"Casa\",\r\n            \"neighborhood\": \"Santa Mônica\",\r\n            \"city\": \"Uberlândia\",\r\n            \"state\": \"MG\",\r\n            \"zipCode\": \"97956-20\",\r\n            \"user_id\": 3 \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios - Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViaCep - Buscar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://viacep.com.br/ws/38410375/json",
+					"protocol": "https",
+					"host": [
+						"viacep",
+						"com",
+						"br"
+					],
+					"path": [
+						"ws",
+						"38410375",
+						"json"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
